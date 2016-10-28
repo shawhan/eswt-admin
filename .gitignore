@@ -1,0 +1,11 @@
+*.swp
+*.DS_Store
+*.log
+.sass-cache/
+public/upload/
+app/config/config.php
+app/sessions/
+vendor/
+composer.lock
+sftp-config.json
+sftp-config-alt.json
