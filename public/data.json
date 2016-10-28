@@ -1,0 +1,149 @@
+
+{
+	"banner" : [
+	{
+		"title" : "10",
+		"photo" : "https://shawhan.github.io/eswt/img/banner-1.jpg",
+		"url" : "http://google.com",
+		"sort" : "10"
+	},{
+		"title" : "5",
+		"photo" : "https://shawhan.github.io/eswt/img/banner-1.jpg",
+		"url" : "http://google.com",
+		"sort" : "5"
+	}],
+	"news" : [
+	{
+		"title" : "最新消息1",
+		"url" : "#contact"
+	},
+	{
+		"title" : "最新消息2",
+		"url" : "#case"
+	}],
+	"indication" : [
+	{
+		"title" : "鈣化性肌腱炎/手臂無法舉高",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "激痛點治療/肌肉痠痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "足底筋膜炎/足跟痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "股骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "髕骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "網球肘/媽媽手",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	}],
+	"media" : [
+	{
+		"title" : "鈣化性肌腱炎/手臂無法舉高",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "激痛點治療/肌肉痠痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "足底筋膜炎/足跟痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "股骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "髕骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "網球肘/媽媽手",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	}],
+	"case" : [
+	{
+		"title" : "鈣化性肌腱炎/手臂無法舉高",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "激痛點治療/肌肉痠痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "足底筋膜炎/足跟痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "股骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "髕骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "網球肘/媽媽手",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	}],
+	"info" : [
+	{
+		"title" : "鈣化性肌腱炎/手臂無法舉高",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "激痛點治療/肌肉痠痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "足底筋膜炎/足跟痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "股骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "髕骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "網球肘/媽媽手",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	}],
+	"activity" : [
+	{
+		"title" : "鈣化性肌腱炎/手臂無法舉高",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "激痛點治療/肌肉痠痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "足底筋膜炎/足跟痛",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "股骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "髕骨肌腱炎",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	},
+	{
+		"title" : "網球肘/媽媽手",
+		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
+	}]
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<title>媒體報導列表 | 管理後台</title>
+	<?php $this->partial('shared/include');?>
+</head>
+<body>
+	<?php $this->partial('shared/nav');?>
+	<?php $this->partial('shared/sidebar');?>
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+				<li class="active">媒體報導</li>
+				<li class="active">列表</li>
+			</ol>
+		</div><!--/.row-->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">列表</div>
+					<div class="panel-body">
+						<?php $this->flashSession->output(true);?>
+						<table class="table table-hover">
+						    <thead><tr>
+						    	<th width="20%;">排序</th>
+						    	<th width="20%;">標題</th>
+						    	<th width="20%;">圖片</th>
+						    	<th width="20%;">連結</th>
+						    	<th width="20%;">新增日期</th>
+						    	<th width="20%;">管理</th>
+						    </tr></thead>
+							<tbody>
+								<?php foreach($data as $k => $row): ?>
+									<tr>
+										<td><?php echo (empty($row->sort)) ? "0" : $row->sort;?></td>
+										<td><?php echo (empty($row->title)) ? "沒有標題" : $row->title;?></td>
+										<td>
+											<img src="<?php echo $row->photo;?>" style="width:100%;">
+										</td>
+										<td><?php echo (empty($row->url)) ? "沒有連結" : $row->url;?></td>
+										<td><?php echo (empty($row->create)) ? "-" : $row->create;?></td>
+										<td>
+											<a href="/media/edit/<?php echo $k;?>" class="btn btn-primary btn-sm">編輯</a>
+											<a onClick="delete_confirm('/media/delete/<?php echo $k;?>')" class="btn btn-danger btn-sm">刪除</a>
+										</td>
+									</tr>
+								<?php endforeach;?>
+							</tbody>
+						</table>
+					</div>
+<script type="text/javascript">
+function delete_confirm(path) {
+    var r = confirm("確定要刪除嗎？");
+    if (r === true) {
+        window.location.href = "<?php echo $this->di->config->site->url; ?>" + path;
+    }
+}
+</script>
+				</div>
+			</div>
+		</div>
+	</div>	<!--/.main-->
+</body>
+</html>

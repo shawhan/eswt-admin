@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登入</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="/js/html5shiv.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">管理後台</div>
+                <div class="panel-body">
+                    <div class="login-form">
+                    <?php $this->flashSession->output(true);?>
+                    <?php echo $this->tag->form(array('login')); ?>
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="帳號" name="user_login" type="text" autofocus="true">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="密碼" name="user_pass" type="password">
+                            </div>
+                            <input type="hidden" name="return_to" value="<?php echo $return_to; ?>"/>
+                            <input type="hidden" name="<?php echo $this->security->getTokenKey() ?>" value="<?php echo $this->security->getToken() ?>"/>
+                            <button class="btn btn-primary login-btn" type="submit">登入</button>
+                        </fieldset>
+                        <?php echo $this->tag->endForm();?>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.col-->
+    </div><!-- /.row -->    
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/moment.min.js"></script>
+    <script type="text/javascript" src="/js/moment-with-locales.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/chart.min.js"></script>
+    <!-- <script src="/js/chart-data.js"></script> -->
+    <!-- <script src="/js/easypiechart.js"></script> -->
+    <!-- <script src="/js/easypiechart-data.js"></script> -->
+    <script src="/js/bootstrap-datetimepicker.js"></script> 
+</body>
+</html>
