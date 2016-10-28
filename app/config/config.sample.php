@@ -2,7 +2,7 @@
 
 return new \Phalcon\Config(array(
     'site' => array(
-        'name'          => 'ESWT 管理後台',
+        'name'          => 'ShockWave管理後台',
         'domain'        => '',
         'url'           => '',
     ),
