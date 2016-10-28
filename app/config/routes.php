@@ -59,6 +59,10 @@ $router->add('/logout', array(
     'action'        => 'logout',
 ))->via('GET')->setName('auth-logout');
 
+$router->add('/output', array(
+    'controller' => 'index',
+    'action' => 'output'
+));
 $router->add('/')->setName('index');
 
 $router->notFound(array(
