@@ -1,103 +1,54 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar"><ul class="nav menu">
+<?php 
+    $url = $this->router->getRewriteUri();
+    $nav_array = array(
+        "輪播圖片" => array(
+            "/banner" => "列表",
+            "/banner/add" => "新增",
+        ),
+        "最新消息" => array(
+            "/news" => "列表",
+            "/news/add" => "新增",
+        ),
+        "適應症" => array( 
+            "/indication" => "列表",
+            "/indication/add" => "新增",
+        ),
+        "媒體報導" => array(
+            "/media" => "列表",
+            "/media/add" => "新增",
+        ),
+        "健康見證" => array(
+            "/case" => "列表",
+            "/case/add" => "新增",
+        ),
+        "健康資訊" => array(
+            "/info" => "列表",
+            "/info/add" => "新增",
+        ),
+        "活動紀實" => array(
+            "/activity" => "列表",
+            "/activity/add" => "新增",
+        )
+    );
+?>
     <li><a href="/"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> 首頁</a></li></li>
-    <li class="parent active">
-        <a data-toggle="collapse" href="#submenu-輪播圖片">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            輪播圖片
-        </a>
-        <ul class="children collapse in" id="submenu-輪播圖片">
-            <li><a href="/banner">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/banner/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-最新消息">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            最新消息
-        </a>
-        <ul class="children collapse" id="submenu-最新消息">
-            <li><a href="/news">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/news/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-適應症">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            適應症
-        </a>
-        <ul class="children collapse" id="submenu-適應症">
-            <li><a href="/indication">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/indication/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-媒體報導">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            媒體報導
-        </a>
-        <ul class="children collapse" id="submenu-媒體報導">
-            <li><a href="/media">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/media/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-健康見證">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            健康見證
-        </a>
-        <ul class="children collapse" id="submenu-健康見證">
-            <li><a href="/case">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/case/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-健康資訊">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            健康資訊
-        </a>
-        <ul class="children collapse" id="submenu-健康資訊">
-            <li><a href="/info">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/info/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
-    <li class="parent">
-        <a data-toggle="collapse" href="#submenu-活動紀實">
-            <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
-            活動紀實
-        </a>
-        <ul class="children collapse" id="submenu-活動紀實">
-            <li><a href="/activity">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 列表
-            </a></li>
-            <li><a href="/activity/add">
-                <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> 新增
-            </a></li>
-        </ul>
-    </li>
+    <?php foreach($nav_array as $title => $row) : 
+        $active = (array_key_exists($url, $row)) ? true : false;?>
+        <li class="parent <?php echo ($active) ? "active" : "";?>">
+            <a data-toggle="collapse" href="#submenu-<?php echo $title?>">
+                <svg class="glyph chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg>
+                <?php echo $title?>
+            </a>
+            <ul class="children collapse <?php echo ($active) ? "in" : "";?>"" id="submenu-<?php echo $title?>">
+                <?php foreach($row as $link => $page) :?>
+                <li><a href="<?php echo $link;?>">
+                    <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> <?php echo $page;?>
+                </a></li>
+                <?php endforeach;?>
+            </ul>
+        </li>
+    <?php endforeach;?>
     <li role="presentation" class="divider"></li>
     <li>
         <a class="logout-btn" href="/logout"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>登出</a>
