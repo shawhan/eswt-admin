@@ -22,7 +22,7 @@
 					<div class="panel-heading">編輯</div>
 					<div class="panel-body">
 						<div class="col-md-8">
-						<?php echo $this->tag->form(array('case/edit/'. $id)); ?>
+						<?php echo $this->tag->form(array('case/edit/'. $id, 'enctype' => 'multipart/form-data')); ?>
 							<?php $this->flashSession->output(true);?>
 							<div class="form-group">
 							    <label class="col-sm-3 control-label">標題*</label>
@@ -41,6 +41,7 @@
 							    <label class="col-sm-3 control-label">圖片*</label>
 							    <div class="col-sm-9">
 							      <img style="width: 100%;" src="<?php echo $data->photo;?>">
+							      <input class="form-control" name="photo" type="file" placeholder="請上傳圖片">
 							      <span class="help-block">請上傳 800x500 以上的圖片</span>
 							    </div>
 							</div>

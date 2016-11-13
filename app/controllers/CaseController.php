@@ -112,6 +112,25 @@ class CaseController extends ControllerBase
         extract($postdata, EXTR_SKIP);
         $hasError = false;
 
+        if ($this->request->hasFiles() == true && $_FILES["photo"]["name"] !== "") {
+            $isUploaded = false;
+            foreach ($this->request->getUploadedFiles() as $file) {
+                $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
+                if ($file->moveTo($path)) {
+                    $isUploaded = true;
+                }
+
+                if ($isUploaded == false) {
+                    $hasError = true;
+                    $this->flashSession->error("請重新上傳圖片。");
+                }
+
+                $photo_path = $this->di->config->site->url . '/'.  $path;
+            }
+        } else {
+            $photo_path = $row->photo;
+        }
+        
         if (empty($title)) {
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
@@ -129,7 +148,7 @@ class CaseController extends ControllerBase
         }else{
             $update = array(
                 "title" => $title,
-                "photo" => $row->photo,
+                "photo" => $photo_path,
                 "url" => $url,
                 "sort" => $sort,
                 "create" => $row->create

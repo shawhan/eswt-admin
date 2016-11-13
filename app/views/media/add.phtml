@@ -31,6 +31,18 @@
 							    </div>
 							</div>
 							<div class="form-group">
+							    <label class="col-sm-3 control-label">日期*</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" name="date" type="text" placeholder="請輸入日期" required>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="col-sm-3 control-label">媒體</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" name="media" type="text" placeholder="請輸入媒體">
+							    </div>
+							</div>
+							<div class="form-group">
 							    <label class="col-sm-3 control-label">排序*</label>
 							    <div class="col-sm-9">
 							      <input class="form-control" name="sort" type="text" placeholder="請輸入排序" required>
@@ -38,9 +50,31 @@
 							    </div>
 							</div>
 							<div class="form-group">
-							    <label class="col-sm-3 control-label">圖片*</label>
+							    <label class="col-sm-3 control-label">封面圖片*</label>
 							    <div class="col-sm-9">
-							      <input class="form-control" name="photo" type="file" placeholder="請輸入排序" required>
+							      <input class="form-control" name="cover" type="file" placeholder="請輸入排序" required>
+							      <span class="help-block">請上傳 800x500 以上的圖片</span>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="col-sm-3 control-label">連結網址類型</label>
+							    <div class="col-sm-9">
+							    	<div class="radio">
+									  <label><input type="radio" name="type" value="" checked="checked">展開圖片</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="youtube">Youtube 影片</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="link">另開新頁</label>
+									</div>
+							      <span class="help-block">連結網址留空則不需修改</span>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="col-sm-3 control-label">展開圖片</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" name="photo" type="file" placeholder="請輸入排序">
 							      <span class="help-block">請上傳 800x500 以上的圖片</span>
 							    </div>
 							</div>
@@ -48,7 +82,7 @@
 							    <label class="col-sm-3 control-label">連結網址</label>
 							    <div class="col-sm-9">
 							      <input class="form-control" type="text" name="url" value="" placeholder="連結網址">
-							      <span class="help-block">不需要連結請留空</span>
+							      <span class="help-block">不需要連結請留空，Youtube影片請輸入ID</span>
 							    </div>
 							</div>
 	  						<button type="submit" class="btn btn-primary btn-sm" type="submit">送出</button>

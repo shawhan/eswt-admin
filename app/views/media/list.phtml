@@ -25,6 +25,7 @@
 						    <thead><tr>
 						    	<th width="20%;">排序</th>
 						    	<th width="20%;">標題</th>
+						    	<th width="20%;">封面照片</th>
 						    	<th width="20%;">圖片</th>
 						    	<th width="20%;">連結</th>
 						    	<th width="20%;">新增日期</th>
@@ -36,9 +37,12 @@
 										<td><?php echo (empty($row->sort)) ? "0" : $row->sort;?></td>
 										<td><?php echo (empty($row->title)) ? "沒有標題" : $row->title;?></td>
 										<td>
+											<img src="<?php echo $row->cover;?>" style="width:100%;">
+										</td>
+										<td>
 											<img src="<?php echo $row->photo;?>" style="width:100%;">
 										</td>
-										<td><?php echo (empty($row->url)) ? "沒有連結" : $row->url;?></td>
+										<td><?php echo (empty($row->url)) ? "展開圖片" : $row->url;?></td>
 										<td><?php echo (empty($row->create)) ? "-" : $row->create;?></td>
 										<td>
 											<a href="/media/edit/<?php echo $k;?>" class="btn btn-primary btn-sm">編輯</a>
