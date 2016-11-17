@@ -81,6 +81,19 @@ class MediaController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請上傳展開圖片。");
         }
+        if ($type === "link" && $url === "") {
+            $hasError = true;
+            $this->flashSession->error("請輸入連結網址。");
+        }
+        if ($type === "youtube") {
+            parse_str(parse_url($url,PHP_URL_QUERY),$param_array);
+            if (!array_key_exists("v", $param_array)) {
+                $hasError = true;
+                $this->flashSession->error("請輸入正確的 Youtube 影片網址。");
+            } else {
+                $url = $param_array["v"];
+            }
+        }
 
         if($hasError){
             return $this->dispatcher->forward(array(
@@ -190,6 +203,15 @@ class MediaController extends ControllerBase
         if ($type === "link" && $url === "") {
             $hasError = true;
             $this->flashSession->error("請輸入連結網址。");
+        }
+        if ($type === "youtube") {
+            parse_str(parse_url($url,PHP_URL_QUERY),$param_array);
+            if (!array_key_exists("v", $param_array)) {
+                $hasError = true;
+                $this->flashSession->error("請輸入正確的 Youtube 影片網址。");
+            } else {
+                $url = $param_array["v"];
+            }
         }
         
         if($hasError){
