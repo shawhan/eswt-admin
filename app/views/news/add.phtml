@@ -38,12 +38,59 @@
 							    </div>
 							</div>
 							<div class="form-group">
-							    <label class="col-sm-3 control-label">連結網址</label>
+							    <label class="col-sm-3 control-label">連結網址類型*</label>
 							    <div class="col-sm-9">
-							      <input class="form-control" type="text" name="url" value="" placeholder="連結網址">
-							      <span class="help-block">不需要連結請留空</span>
+							    	<div class="radio">
+									  <label><input type="radio" name="type" value="" checked="checked">沒有網址</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="linkto">本站</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="other">另開新頁</label>
+									</div>
+							      <span class="help-block">不需要連結網址請選「沒有網址」</span>
 							    </div>
 							</div>
+							<div class="form-group other-area" style="display: none;">
+							    <label class="col-sm-3 control-label">連結網址</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" type="text" name="other" value="" placeholder="連結網址">
+							    </div>
+							</div>
+							<div class="form-group linkto-area" style="display: none;">
+							    <label class="col-sm-3 control-label">連結區塊</label>
+							    <div class="col-sm-9">
+								    <select class="form-control" name="linkto">
+								    	<option value="#about">關於</option>
+								    	<option value="#qa">Q&A</option>
+								    	<option value="#media">媒體</option>
+								    	<option value="#case">見證</option>
+								    	<option value="#info">資訊</option>
+								    	<option value="#activity">活動</option>
+								    	<option value="#location">地點</option>
+								    	<option value="#contact">聯絡我們</option>
+								    </select>
+							    </div>
+							</div>
+							<script type="text/javascript">
+								$('input[name=type]').change(function() {
+									switch(this.value) {
+										case '' :
+											$('.other-area').hide();
+											$('.linkto-area').hide();
+										break;
+										case 'linkto' :
+											$('.other-area').hide();
+											$('.linkto-area').show();
+										break;
+										case 'other' :
+											$('.other-area').show();
+											$('.linkto-area').hide();
+										break;
+									}
+							    });
+							</script>
 	  						<button type="submit" class="btn btn-primary btn-sm" type="submit">送出</button>
 	  						<input type="hidden" name="return_to" value="<?php echo $return_to; ?>"/>
             				<input type="hidden" name="<?php echo $this->security->getTokenKey() ?>" value="<?php echo $this->security->getToken() ?>"/>

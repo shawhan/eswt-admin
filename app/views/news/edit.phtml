@@ -38,12 +38,60 @@
 							    </div>
 							</div>
 							<div class="form-group">
-							    <label class="col-sm-3 control-label">連結網址</label>
+							    <label class="col-sm-3 control-label">連結網址類型*</label>
 							    <div class="col-sm-9">
-							      <input class="form-control" type="text" name="url" placeholder="連結網址" value="<?php echo (!empty($data->url)) ? $data->url : '';?>">
-							      <span class="help-block">不需要連結請留空</span>
+							    	<div class="radio">
+									  <label><input type="radio" name="type" value="" <?php echo ($data->type === "") ? 'checked="checked"' : '';?>>沒有網址</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="linkto" <?php echo ($data->type === "linkto") ? 'checked="checked"' : '';?>>本站</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="other" <?php echo ($data->type === "other") ? 'checked="checked"' : '';?>>另開新頁</label>
+									</div>
+							      <span class="help-block">不需要連結網址請選「沒有網址」</span>
 							    </div>
 							</div>
+							<div class="form-group other-area" <?php echo ($data->type === "other") ? '' : 'style="display: none;"';?>>
+							    <label class="col-sm-3 control-label">連結網址</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" type="text" name="other" value="<?php echo (!empty($data->url)) ? $data->url : '';?>" placeholder="連結網址">
+							    </div>
+							</div>
+							<div class="form-group linkto-area" <?php echo ($data->type === "linkto") ? '' : 'style="display: none;"';?>>
+							    <label class="col-sm-3 control-label">連結區塊</label>
+							    <div class="col-sm-9">
+								    <select class="form-control" name="linkto">
+
+								    <option value="#about" <?php echo ($data->url === "#about") ? 'selected="select"' : '';?>>關於</option>
+							    	<option value="#qa" <?php echo ($data->url === "#qa") ? 'selected="select"' : '';?>>Q&A</option>
+							    	<option value="#media" <?php echo ($data->url === "#media") ? 'selected="select"' : '';?>>媒體</option>
+							    	<option value="#case" <?php echo ($data->url === "#case") ? 'selected="select"' : '';?>>見證</option>
+							    	<option value="#info" <?php echo ($data->url === "#info") ? 'selected="select"' : '';?>>資訊</option>
+							    	<option value="#activity" <?php echo ($data->url === "#activity") ? 'selected="select"' : '';?>>活動</option>
+							    	<option value="#location" <?php echo ($data->url === "#location") ? 'selected="select"' : '';?>>地點</option>
+							    	<option value="#contact" <?php echo ($data->url === "#contact") ? 'selected="select"' : '';?>>聯絡我們</option>
+								    </select>
+							    </div>
+							</div>
+							<script type="text/javascript">
+								$('input[name=type]').change(function() {
+									switch(this.value) {
+										case '' :
+											$('.other-area').hide();
+											$('.linkto-area').hide();
+										break;
+										case 'linkto' :
+											$('.other-area').hide();
+											$('.linkto-area').show();
+										break;
+										case 'other' :
+											$('.other-area').show();
+											$('.linkto-area').hide();
+										break;
+									}
+							    });
+							</script>
 	  						<button type="submit" class="btn btn-primary btn-sm" type="submit">送出</button>
 	  						<input type="hidden" name="return_to" value="<?php echo $return_to; ?>"/>
 	  						 <input type="hidden" name="id" value="<?php echo $id; ?>"/>
