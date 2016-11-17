@@ -68,6 +68,7 @@ class ActivityController extends ControllerBase
             $data = json_decode(file_get_contents('data.json'));
             $insert = array(
                 "title" => $title,
+                "summary" => $summary,
                 "photo" => $photo_path,
                 "url" => $url,
                 "sort" => $sort,
@@ -128,6 +129,7 @@ class ActivityController extends ControllerBase
         }else{
             $update = array(
                 "title" => $title,
+                "summary" => $summary,
                 "photo" => $row->photo,
                 "url" => $url,
                 "sort" => $sort,
