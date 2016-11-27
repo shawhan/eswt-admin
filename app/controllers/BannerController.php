@@ -66,7 +66,7 @@ class BannerController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
         }
-        if (empty($sort)) {
+        if ($sort === "" || !is_int($sort)) {
             $hasError = true;
             $this->flashSession->error("請輸入順序。");
         }
@@ -189,7 +189,7 @@ class BannerController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
         }
-        if (empty($sort)) {
+        if ($sort === "" || !is_int($sort)) {
             $hasError = true;
             $this->flashSession->error("請輸入順序。");
         }
