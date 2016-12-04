@@ -164,8 +164,6 @@ class MediaController extends ControllerBase
 
         $cover_path = $row->cover;
         $photo_path = $row->photo;
-        $cover_path = "";
-        $photo_path = "";
         if ($this->request->hasFiles() == true) {
             $isUploaded = false;
             foreach ($this->request->getUploadedFiles() as $file) {
