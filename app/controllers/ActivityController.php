@@ -33,23 +33,17 @@ class ActivityController extends ControllerBase
             $return_to = '/activity/add';
         }
 
-        if ($this->request->hasFiles() == true) {
-            $isUploaded = false;
-            foreach ($this->request->getUploadedFiles() as $file) {
-                $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
-                if ($file->moveTo($path)) {
-                    $isUploaded = true;
-                }
+        if(!empty($photo_data)) {
+            $photo_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $photo_data));
 
-                if ($isUploaded == false) {
-                    $hasError = true;
-                    $this->flashSession->error("請重新上傳圖片。");
-                }
-
-                $photo_path = $this->di->config->site->url . '/'.  $path;
-            }
+            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+            file_put_contents($path, $photo_data);
+            $photo_path = $this->di->config->site->url . '/'.  $path;
+        } else {
+            $hasError = true;
+            $this->flashSession->error("請重新上傳圖片。");
         }
-
+        
         if (empty($title)) {
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
@@ -112,6 +106,14 @@ class ActivityController extends ControllerBase
         $postdata = $this->request->getPost();
         extract($postdata, EXTR_SKIP);
         $hasError = false;
+
+        if(!empty($photo_data)) {
+            $photo_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $photo_data));
+
+            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+            file_put_contents($path, $photo_data);
+            $row->photo = $this->di->config->site->url . '/'.  $path;
+        }
 
         if (empty($title)) {
             $hasError = true;
