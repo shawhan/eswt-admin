@@ -45,9 +45,18 @@
 							</div>
 							<div class="form-group">
 							    <label class="col-sm-3 control-label">圖片*</label>
-							    <div class="col-sm-9">
-							      <input class="form-control" name="photo" type="file" placeholder="請輸入排序" required>
-							      <span class="help-block">請上傳 800x500 以上的圖片</span>
+							    <div class="col-sm-9 upload-crop-image">
+									<div class="image-box">
+										<div class="thumb-box"></div>
+										<div class="loading"></div>
+									</div>
+									<div class="image-action">
+										<input class="form-control" name="photo" type="file" placeholder="請上傳圖片" required>
+										<input class="form-control" name="photo_data" type="hidden" >
+										<span class="btn btn-default btnZoomIn">放大</span>
+										<span class="btn btn-default btnZoomOut">縮小</span>
+									</div>
+									<span class="help-block">請上傳 800x500 以上的圖片</span>
 							    </div>
 							</div>
 							<div class="form-group">
@@ -57,11 +66,70 @@
 							      <span class="help-block">不需要連結請留空</span>
 							    </div>
 							</div>
-	  						<button type="submit" class="btn btn-primary btn-sm" type="submit">送出</button>
+	  						<button type="submit" class="btn btn-primary btn-sm form-submit-btn" type="submit">送出</button>
 	  						<input type="hidden" name="return_to" value="<?php echo $return_to; ?>"/>
             				<input type="hidden" name="<?php echo $this->security->getTokenKey() ?>" value="<?php echo $this->security->getToken() ?>"/>
 						</div>
 						<?php echo $this->tag->endForm();?>
+<script type="text/javascript">
+	var options ={
+        thumbBox: '.thumb-box',
+        imgSrc: ''
+    }
+    var cropper = $('.image-box').cropbox(options);
+    $('.upload-crop-image').on('change', 'input[name="photo"]', function(){
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            options.imgSrc = e.target.result;
+            cropper = $('.image-box').cropbox(options);
+        }
+        reader.readAsDataURL(this.files[0]);
+        this.files = [];
+    }).on('click', '.btnZoomIn', function(){
+    	cropper.ratio*=1.1;
+		var w =  parseInt(cropper.image.width) * cropper.ratio
+	    	, h =  parseInt(cropper.image.height) * cropper.ratio
+			, pw = ($('.image-box').width() - w) / 2
+	    	, ph = ($('.image-box').height() - h) / 2;
+	    $('.image-box').css({
+	        'background-size': w +'px ' + h + 'px',
+	        'background-position': pw + 'px ' + ph + 'px'
+	    });
+    }).on('click', '.btnZoomOut', function(){
+    	cropper.ratio*=0.9;
+		var w =  parseInt(cropper.image.width) * cropper.ratio
+	    	, h =  parseInt(cropper.image.height) * cropper.ratio
+			, pw = ($('.image-box').width() - w) / 2
+	    	, ph = ($('.image-box').height() - h) / 2;
+	    $('.image-box').css({
+	        'background-size': w +'px ' + h + 'px',
+	        'background-position': pw + 'px ' + ph + 'px'
+	    });
+    }).on('mousewheel', '.image-box', function(e){
+    	e.stopImmediatePropagation();
+		if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0){
+			cropper.ratio*=1.1;
+		} else {
+			cropper.ratio*=0.9;
+		}
+		var w =  parseInt(cropper.image.width) * cropper.ratio
+			, h =  parseInt(cropper.image.height) * cropper.ratio
+			, pw = ($('.image-box').width() - w) / 2
+			, ph = ($('.image-box').height() - h) / 2;
+		$('.image-box').css({
+		    'background-size': w +'px ' + h + 'px',
+		    'background-position': pw + 'px ' + ph + 'px'
+		});
+    });
+    $('.form-submit-btn').click(function(e){
+		e.preventDefault();
+		if($('input[name=photo]').val() !== ""){
+			$('input[name=photo_data]').val(cropper.getDataURL());
+			$('form').submit();
+		}
+		$('form').submit();
+	});
+</script>
 					</div>
 				</div>
 			</div>
