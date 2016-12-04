@@ -40,27 +40,35 @@ class MediaController extends ControllerBase
             foreach ($this->request->getUploadedFiles() as $file) {
                 if($file->getName() !== "") {
                     $key = $file->getKey();
-                    $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
-                    if ($file->moveTo($path)) {
-                        $isUploaded = true;
-                    }
 
-                    if ($isUploaded == false) {
-                        $hasError = true;
-                        if ($key === "cover") {
-                            $this->flashSession->error("請重新上傳封面圖片。");
-                        } 
-                        if ($key === "photo") {
+                    if ($key === "photo") {
+                        $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
+
+                        if ($file->moveTo($path)) {
+                            $isUploaded = true;
+                        }
+
+                        if ($isUploaded == false) {
+                            $hasError = true;
                             $this->flashSession->error("請重新上傳展開圖片。");
                         }
+
+                        $photo_path = $this->di->config->site->url . '/'.  $path;
                     }
 
                     if ($key === "cover") {
-                        $cover_path = $this->di->config->site->url . '/'.  $path;
+                        if(!empty($cover_data)) {
+                            $cover_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $cover_data));
+
+                            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+                            file_put_contents($path, $cover_data);
+                            $cover_path = $this->di->config->site->url . '/'.  $path;
+                        } else {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳封面圖片。");
+                        }
                     }
-                    if ($key === "photo") {
-                        $photo_path = $this->di->config->site->url . '/'.  $path;
-                    }
+                    
                 }
             }
         }
@@ -156,32 +164,42 @@ class MediaController extends ControllerBase
 
         $cover_path = $row->cover;
         $photo_path = $row->photo;
+        $cover_path = "";
+        $photo_path = "";
         if ($this->request->hasFiles() == true) {
             $isUploaded = false;
             foreach ($this->request->getUploadedFiles() as $file) {
                 if($file->getName() !== "") {
                     $key = $file->getKey();
-                    $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
-                    if ($file->moveTo($path)) {
-                        $isUploaded = true;
-                    }
 
-                    if ($isUploaded == false) {
-                        $hasError = true;
-                        if ($key === "cover") {
-                            $this->flashSession->error("請重新上傳封面圖片。");
-                        } 
-                        if ($key === "photo") {
+                    if ($key === "photo") {
+                        $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
+
+                        if ($file->moveTo($path)) {
+                            $isUploaded = true;
+                        }
+
+                        if ($isUploaded == false) {
+                            $hasError = true;
                             $this->flashSession->error("請重新上傳展開圖片。");
                         }
+
+                        $photo_path = $this->di->config->site->url . '/'.  $path;
                     }
 
                     if ($key === "cover") {
-                        $cover_path = $this->di->config->site->url . '/'.  $path;
+                        if(!empty($cover_data)) {
+                            $cover_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $cover_data));
+
+                            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+                            file_put_contents($path, $cover_data);
+                            $cover_path = $this->di->config->site->url . '/'.  $path;
+                        } else {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳封面圖片。");
+                        }
                     }
-                    if ($key === "photo") {
-                        $photo_path = $this->di->config->site->url . '/'.  $path;
-                    }
+                    
                 }
             }
         }
