@@ -68,7 +68,7 @@ class MediaController extends ControllerBase
                             $this->flashSession->error("請重新上傳封面圖片。");
                         }
                     }
-                    
+
                 }
             }
         }
@@ -126,7 +126,7 @@ class MediaController extends ControllerBase
             $data->media[] = $insert;
 
             file_put_contents('data.json', json_encode($data));
-            
+
 
             $this->flashSession->success("新增成功。");
             return $this->response->redirect($return_to, true);
@@ -197,7 +197,7 @@ class MediaController extends ControllerBase
                             $this->flashSession->error("請重新上傳封面圖片。");
                         }
                     }
-                    
+
                 }
             }
         }
@@ -232,7 +232,7 @@ class MediaController extends ControllerBase
                 $url = $param_array["v"];
             }
         }
-        
+
         if($hasError){
             return $this->dispatcher->forward(array(
                 'controller'    => 'media',

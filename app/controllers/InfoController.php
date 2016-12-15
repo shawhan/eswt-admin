@@ -48,12 +48,16 @@ class InfoController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
         }
+        if (empty($date)) {
+            $hasError = true;
+            $this->flashSession->error("請輸入日期。");
+        }
         $sort = (int)$sort;
         if ($sort === "" || !is_int($sort)) {
             $hasError = true;
             $this->flashSession->error("請輸入順序。");
         }
-        
+
         if($hasError){
             return $this->dispatcher->forward(array(
                 'controller'    => 'info',
@@ -67,12 +71,14 @@ class InfoController extends ControllerBase
                 "photo" => $photo_path,
                 "url" => $url,
                 "sort" => $sort,
+                "media" => $media,
+                "date" => $date,
                 "create" => date('Y-m-d H:i')
             );
             $data->info[] = $insert;
 
             file_put_contents('data.json', json_encode($data));
-            
+
 
             $this->flashSession->success("新增成功。");
             return $this->response->redirect($return_to, true);
@@ -122,12 +128,16 @@ class InfoController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請輸入標題。");
         }
+        if (empty($date)) {
+            $hasError = true;
+            $this->flashSession->error("請輸入日期。");
+        }
         $sort = (int)$sort;
         if ($sort === "" || !is_int($sort)) {
             $hasError = true;
             $this->flashSession->error("請輸入順序。");
         }
-        
+
         if($hasError){
             return $this->dispatcher->forward(array(
                 'controller'    => 'info',
@@ -140,6 +150,8 @@ class InfoController extends ControllerBase
                 "photo" => $photo_path,
                 "url" => $url,
                 "sort" => $sort,
+                "media" => $media,
+                "date" => $date,
                 "create" => $row->create
             );
             $data->info["$id"] = $update;

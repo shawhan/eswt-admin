@@ -1,149 +1,348 @@
-
 {
-	"banner" : [
-	{
-		"title" : "10",
-		"photo" : "https://shawhan.github.io/eswt/img/banner-1.jpg",
-		"url" : "http://google.com",
-		"sort" : "10"
-	},{
-		"title" : "5",
-		"photo" : "https://shawhan.github.io/eswt/img/banner-1.jpg",
-		"url" : "http://google.com",
-		"sort" : "5"
-	}],
-	"news" : [
-	{
-		"title" : "最新消息1",
-		"url" : "#contact"
-	},
-	{
-		"title" : "最新消息2",
-		"url" : "#case"
-	}],
-	"indication" : [
-	{
-		"title" : "鈣化性肌腱炎/手臂無法舉高",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "激痛點治療/肌肉痠痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "足底筋膜炎/足跟痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "股骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "髕骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "網球肘/媽媽手",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	}],
-	"media" : [
-	{
-		"title" : "鈣化性肌腱炎/手臂無法舉高",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "激痛點治療/肌肉痠痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "足底筋膜炎/足跟痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "股骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "髕骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "網球肘/媽媽手",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	}],
-	"case" : [
-	{
-		"title" : "鈣化性肌腱炎/手臂無法舉高",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "激痛點治療/肌肉痠痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "足底筋膜炎/足跟痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "股骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "髕骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "網球肘/媽媽手",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	}],
-	"info" : [
-	{
-		"title" : "鈣化性肌腱炎/手臂無法舉高",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "激痛點治療/肌肉痠痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "足底筋膜炎/足跟痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "股骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "髕骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "網球肘/媽媽手",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	}],
-	"activity" : [
-	{
-		"title" : "鈣化性肌腱炎/手臂無法舉高",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "激痛點治療/肌肉痠痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "足底筋膜炎/足跟痛",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "股骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "髕骨肌腱炎",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	},
-	{
-		"title" : "網球肘/媽媽手",
-		"photo" : "https://shawhan.github.io/eswt/img/example.jpg"
-	}]
+    "banner": [
+        {
+            "title": "1",
+            "photo": "http://data.shockwave.com.tw/img/5e33f42a51bdb4ffdf20820daec09a19-震波banner-01.jpg",
+            "url": "",
+            "sort": 10,
+            "create": "2016-11-29 03:34"
+        },
+        {
+            "title": "2",
+            "photo": "http://data.shockwave.com.tw/img/a3daedb337c1cee9f6e062e96d4dadff-震波banner-02.jpg",
+            "url": "",
+            "sort": 10,
+            "create": "2016-11-29 03:34"
+        },
+        {
+            "title": "3",
+            "photo": "http://data.shockwave.com.tw/img/001950e0d6365d32f1286a6c2b747300-震波banner-03.jpg",
+            "url": "",
+            "sort": 10,
+            "create": "2016-11-29 03:35"
+        },
+        {
+            "title": "4",
+            "photo": "http://data.shockwave.com.tw/img/e3626ac6623958cd356580ea32d1d3f3-震波banner-04.jpg",
+            "url": "",
+            "sort": 10,
+            "create": "2016-11-29 03:35"
+        },
+        {
+            "title": "5",
+            "photo": "http://data.shockwave.com.tw/img/f797a74badfac93d99cf4627be4797a1-banner01.jpg",
+            "url": "",
+            "sort": 10,
+            "create": "2016-11-29 03:35"
+        }
+    ],
+    "news": [
+        {
+            "title": "最新消息1",
+            "url": "#contact"
+        },
+        {
+            "title": "最新消息2",
+            "url": "#case"
+        }
+    ],
+    "indication": [
+        {
+            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "summary": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "url": null,
+            "sort": 0,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11"
+        },
+        {
+            "title": "激痛點治療/肌肉痠痛",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "足底筋膜炎/足跟痛",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "股骨肌腱炎",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "髕骨肌腱炎",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "網球肘/媽媽手",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        }
+    ],
+    "media": [
+        {
+            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "激痛點治療/肌肉痠痛",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "足底筋膜炎/足跟痛",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "股骨肌腱炎",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "髕骨肌腱炎",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "網球肘/媽媽手",
+            "summary": "",
+            "date": "",
+            "create": "2016-11-29 03:11",
+            "sort": 10,
+            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        }
+    ],
+    "case": [
+        {
+            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "激痛點治療/肌肉痠痛",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "足底筋膜炎/足跟痛",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "股骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "髕骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "網球肘/媽媽手",
+            "summary": "",
+            "sort": 10,
+            "date": "2016-11-29 03:11",
+            "create": "2016-11-29 03:11",
+            "media": "",
+            "url": "",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        }
+    ],
+    "info": [
+        {
+            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "激痛點治療/肌肉痠痛",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "足底筋膜炎/足跟痛",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "股骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "髕骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "網球肘/媽媽手",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        }
+    ],
+    "activity": [
+        {
+            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "激痛點治療/肌肉痠痛",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "足底筋膜炎/足跟痛",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "股骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "髕骨肌腱炎",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        },
+        {
+            "title": "網球肘/媽媽手",
+            "summary": "",
+            "sort": 10,
+            "date": "",
+            "media": "",
+            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+        }
+    ]
 }
