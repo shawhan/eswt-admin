@@ -1,60 +1,63 @@
 {
     "banner": [
         {
-            "title": "1",
-            "photo": "http://data.shockwave.com.tw/img/5e33f42a51bdb4ffdf20820daec09a19-震波banner-01.jpg",
-            "url": "",
-            "sort": 10,
-            "create": "2016-11-29 03:34"
-        },
-        {
             "title": "2",
-            "photo": "http://data.shockwave.com.tw/img/a3daedb337c1cee9f6e062e96d4dadff-震波banner-02.jpg",
+            "photo": "http://data.shockwave.com.tw/img/1b6306f6d4841fa9350c625082308d4e-震波banner-02.jpg",
             "url": "",
             "sort": 10,
             "create": "2016-11-29 03:34"
         },
         {
             "title": "3",
-            "photo": "http://data.shockwave.com.tw/img/001950e0d6365d32f1286a6c2b747300-震波banner-03.jpg",
+            "photo": "http://data.shockwave.com.tw/img/36edcd9ff2e314c8cc18db39b35ebbaf-震波banner-03.jpg",
             "url": "",
             "sort": 10,
             "create": "2016-11-29 03:35"
         },
         {
             "title": "4",
-            "photo": "http://data.shockwave.com.tw/img/e3626ac6623958cd356580ea32d1d3f3-震波banner-04.jpg",
+            "photo": "http://data.shockwave.com.tw/img/fb474d1c530d6a8b02bb138e2f97cb18-震波banner-04.jpg",
             "url": "",
             "sort": 10,
             "create": "2016-11-29 03:35"
         },
         {
             "title": "5",
-            "photo": "http://data.shockwave.com.tw/img/f797a74badfac93d99cf4627be4797a1-banner01.jpg",
+            "photo": "http://data.shockwave.com.tw/img/dd9063528e124307689d6fb080c348d5-banner01.jpg",
             "url": "",
-            "sort": 10,
+            "sort": 1,
             "create": "2016-11-29 03:35"
         }
     ],
     "news": [
         {
-            "title": "最新消息1",
-            "url": "#contact"
+            "title": "我想緩解疼痛，哪裡有震波？",
+            "url": "#location",
+            "sort": 1,
+            "create": null
         },
         {
-            "title": "最新消息2",
-            "url": "#case"
+            "title": "跟足底筋膜炎說掰掰！",
+            "url": "#media",
+            "sort": 1,
+            "create": null
+        },
+        {
+            "title": "多力波跟邁氏波哪裡不一樣?",
+            "url": "#about",
+            "sort": 10,
+            "create": "2016-12-26 16:19"
         }
     ],
     "indication": [
         {
             "title": "鈣化性肌腱炎/手臂無法舉高",
             "summary": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/7c2dd8c432a15739a3804287177a7a49.png",
             "url": null,
-            "sort": 0,
-            "date": "",
+            "sort": 1,
             "media": "",
+            "date": "2016/12/16",
             "create": "2016-11-29 03:11"
         },
         {
@@ -69,11 +72,12 @@
         {
             "title": "足底筋膜炎/足跟痛",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/54bbcf7a955f36438b13fc791bee6392.png",
+            "url": null,
             "sort": 10,
             "media": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "date": "20161216",
+            "create": "2016-11-29 03:11"
         },
         {
             "title": "股骨肌腱炎",
@@ -96,253 +100,187 @@
         {
             "title": "網球肘/媽媽手",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
+            "photo": "http://data.shockwave.com.tw/img/4780b2e8a6db503b37222a080163804e.png",
+            "url": null,
             "sort": 10,
             "media": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "date": "20161216",
+            "create": "2016-11-29 03:11"
+        },
+        {
+            "title": "肩頸僵硬/痠痛/緊繃",
+            "summary": "",
+            "photo": "http://data.shockwave.com.tw/img/d2b4618ea70cc001391100b3c6c7de4d.png",
+            "url": null,
+            "sort": 10,
+            "media": "",
+            "date": "20161216",
+            "create": "2016-12-16 11:20"
         }
     ],
     "media": [
         {
-            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "title": "體外震波緩解筋骨痠痛",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
+            "date": "2014-10-18",
+            "cover": "http://data.shockwave.com.tw/img/4417f8083fdc3baa231b8b4c76e26380.png",
+            "photo": "http://data.shockwave.com.tw/img/d8916405c5f1b01a45ac1bbcddec660d-2014-10-18_YAHOO新聞_筋骨痠痛 體外震波緩解.png",
+            "url": "",
             "type": "",
-            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "media": "Yahoo!奇摩新聞",
+            "sort": 10,
+            "create": "2016-11-29 03:11"
         },
         {
-            "title": "激痛點治療/肌肉痠痛",
+            "title": "多力波打敗筋骨痠痛！非侵入性治療　國際醫學權威推薦 ",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
+            "date": "2014-10-24",
+            "cover": "http://data.shockwave.com.tw/img/f11fcf83b9f991903fe3b0cd20f267ba.png",
+            "photo": "http://data.shockwave.com.tw/img/63042f7da3c97a5cca7cb9e12a343c5f-20141024-多力波-打敗筋骨痠痛！非侵入性治療　國際醫學權威推薦 NOWnews 今日新聞.png",
+            "url": "",
             "type": "",
-            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "media": "NOWnews 今日新聞",
+            "sort": 10,
+            "create": "2016-11-29 03:11"
         },
         {
-            "title": "足底筋膜炎/足跟痛",
-            "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
+            "title": "運動傷害新療法 體外震波助組織再生　",
+            "summary": "原用於泌尿科 體外震波也治運動傷害",
+            "date": "2014-10-18",
+            "cover": "http://data.shockwave.com.tw/img/1a39dc21e0039746c011064b7a4e376f.png",
+            "photo": "http://data.shockwave.com.tw/img/f5555136e30108615686dc49a1190322-2014-10-18-台視新聞_運動傷害新療法 體外震波助組織再生　原用於泌尿科 體外震波也治運動傷害.jpeg",
+            "url": "",
             "type": "",
-            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "media": "台視新聞",
+            "sort": 9,
+            "create": "2016-11-29 03:11"
         },
         {
-            "title": "股骨肌腱炎",
+            "title": "震波復健像按摩 邁氏波輕鬆解決酸痛魔 ",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
-            "type": "",
+            "date": "2014-06-13",
             "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "photo": "http://data.shockwave.com.tw/img/236ce2015c028789981e89ffc3c2c8e7-2014-06-13-邁波-震波復健像按摩 輕鬆解決酸痛魔 Yahoo奇摩新聞.png",
+            "url": "",
+            "type": "",
+            "media": "Yahoo奇摩新聞",
+            "sort": 10,
+            "create": "2016-11-29 03:11"
         },
         {
-            "title": "髕骨肌腱炎",
-            "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
+            "title": "治療運動傷害 方法多樣化 ",
+            "summary": "醫界最新引進多力波複合式震波治療系統，運動選手、喜愛運動的民眾患者可接受更全面的治療。",
+            "date": "2014-09-26",
+            "cover": "http://data.shockwave.com.tw/img/6066890d8d5ad0efaa99cd0cf804da92.png",
+            "photo": "http://data.shockwave.com.tw/img/7cb81e55f2f34302b4c52474bac2e297-2014-09-26治療運動傷害 多樣化 Yahoo奇摩新聞.jpeg",
+            "url": "",
             "type": "",
-            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "media": "Yahoo奇摩新聞",
+            "sort": 10,
+            "create": "2016-11-29 03:11"
         },
         {
-            "title": "網球肘/媽媽手",
+            "title": "新「國民病」！瘋路跑傷身　肌腱炎、足底筋膜炎大增",
             "summary": "",
-            "date": "",
-            "create": "2016-11-29 03:11",
-            "sort": 10,
-            "media": "",
+            "date": "2014-10-28",
+            "cover": "http://data.shockwave.com.tw/img/2f192083d6ac8c4a456ae11a634f51d0.png",
+            "photo": "http://data.shockwave.com.tw/img/bfdca9417a9a8e68d3f940c43e93422e-2014-10-28_YAHOO新聞_新「國民病」！瘋路跑傷身　肌腱炎、足底筋膜炎大增.png",
+            "url": "",
+            "media": "YAHOO新聞",
             "type": "",
-            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "sort": 10,
+            "create": "2016-12-29 10:26"
+        },
+        {
+            "title": "運動傷害　需長期復健搭配震波治療　有效緩解疼痛症狀",
+            "summary": "高雄長庚榮譽院長王清貞表示，喜歡運動的人越來越多，使得慢性運動傷害患者日益增加，長期復健搭配震波治療可有效緩解疼痛症狀",
+            "date": "2014-11-01",
+            "cover": "http://data.shockwave.com.tw/img/77fa011c9a0cde2be5646692e4bc4d5f.png",
+            "photo": "http://data.shockwave.com.tw/img/fe85354d92ee6d518d991e5d87f5e69f-2014-11-01-聯合新聞網_ 健康天地 健康醫藥 _運動傷害 需長期復健.jpeg",
+            "url": "",
+            "media": "聯合新聞網",
+            "type": "",
+            "sort": 10,
+            "create": "2016-12-29 12:08"
+        },
+        {
+            "title": "精確瞄準病灶點 多力波治癒頑固疼痛 ",
+            "summary": "",
+            "date": "2014-12-15",
+            "cover": "http://data.shockwave.com.tw/img/54e0b9faf8b8f5a94333af0a07e942d9.png",
+            "photo": "http://data.shockwave.com.tw/img/02f7fd0f2c434e43f1146de0809fb0c1-20141215-多波-精確瞄準病灶點 多力波治癒頑固疼痛 Yahoo奇摩新聞.png",
+            "url": "",
+            "media": "Yahoo奇摩新聞",
+            "type": "",
+            "sort": 10,
+            "create": "2016-12-30 11:16"
+        },
+        {
+            "title": "三大筋骨痠痛症狀 體外震波治療有效緩解",
+            "summary": "",
+            "date": "2015-06-29",
+            "cover": "http://data.shockwave.com.tw/img/3ac227655bf0a844e39da0c54902d467.png",
+            "photo": "http://data.shockwave.com.tw/img/e31431d447e14645644f80b9a132d2ec-20150629-邁波-三大筋骨痠痛症狀 體外震波治療有效緩解 Yahoo奇摩新聞.png",
+            "url": "",
+            "media": "Yahoo奇摩新聞",
+            "type": "",
+            "sort": 10,
+            "create": "2016-12-30 11:37"
+        },
+        {
+            "title": "肩頸痠痛、足底筋膜炎 體外震波緩解痼疾",
+            "summary": "",
+            "date": "2015-09-13",
+            "cover": "http://data.shockwave.com.tw/img/62fcc673d8402e185e0188c2e00c37d3.png",
+            "photo": "http://data.shockwave.com.tw/img/69f053186d6170a7ed6263d68ac10333-20150913-邁波-肩頸痠痛、足底筋膜炎 體外震波緩解痼疾 Yahoo奇摩新聞.png",
+            "url": "",
+            "media": "Yahoo奇摩新聞",
+            "type": "",
+            "sort": 10,
+            "create": "2016-12-30 11:49"
         }
     ],
     "case": [
         {
-            "title": "鈣化性肌腱炎/手臂無法舉高",
+
+            "title": "敬請期待",
             "summary": "",
-            "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
-            "media": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
             "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "激痛點治療/肌肉痠痛",
-            "summary": "",
             "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
             "media": "",
-            "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "足底筋膜炎/足跟痛",
-            "summary": "",
-            "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
-            "media": "",
-            "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "股骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
-            "media": "",
-            "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "髕骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
-            "media": "",
-            "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "網球肘/媽媽手",
-            "summary": "",
-            "sort": 10,
-            "date": "2016-11-29 03:11",
-            "create": "2016-11-29 03:11",
-            "media": "",
-            "url": "",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "date": "2016-11-29",
+            "create": "2016-11-29 03:11"
         }
     ],
     "info": [
         {
-            "title": "鈣化性肌腱炎/手臂無法舉高",
-            "summary": "",
+            "title": "睡得好，遠離全身痠痛",
+            "summary": "身體痠痛，除了震波治療，還要從日常生活做起～越動越不痛！",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/a4e34db3d2dbab8f238d3749c464fe79.png",
+            "photo": "http://data.shockwave.com.tw/img/a4e34db3d2dbab8f238d3749c464fe79.png",
+            "url": "http://www.commonhealth.com.tw/article/article.action?nid=69585&healthwall=all",
             "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "激痛點治療/肌肉痠痛",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "足底筋膜炎/足跟痛",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "股骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "髕骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "網球肘/媽媽手",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "media": "康健雜誌192期",
+            "date": "2016-12-28",
+            "create": "2016-11-29 03:11"
         }
     ],
     "activity": [
         {
-            "title": "鈣化性肌腱炎/手臂無法舉高",
+            "title": "敬請期待",
             "summary": "",
+            "type": "",
+            "cover": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png",
+            "url": "",
             "sort": 10,
-            "date": "",
             "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "激痛點治療/肌肉痠痛",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "足底筋膜炎/足跟痛",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "股骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "髕骨肌腱炎",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
-        },
-        {
-            "title": "網球肘/媽媽手",
-            "summary": "",
-            "sort": 10,
-            "date": "",
-            "media": "",
-            "create": "2016-11-29 03:11",
-            "photo": "http://data.shockwave.com.tw/img/772b3802d0ad2a6767b57ea0dd870a10.png"
+            "date": "2016-12",
+            "create": "2016-11-29 03:11"
         }
     ]
 }

@@ -56,19 +56,40 @@
 							    </div>
 							</div>
 							<div class="form-group">
-							    <label class="col-sm-3 control-label">圖片*</label>
+							    <label class="col-sm-3 control-label">封面圖片*</label>
 							    <div class="col-sm-9 upload-crop-image">
 									<div class="image-box">
 										<div class="thumb-box"></div>
 										<div class="loading"></div>
 									</div>
 									<div class="image-action">
-										<input class="form-control" name="photo" type="file" placeholder="請上傳圖片" required>
-										<input class="form-control" name="photo_data" type="hidden" >
+										<input class="form-control" name="cover" type="file" placeholder="請上傳圖片" required>
+										<input class="form-control" name="cover_data" type="hidden" >
 										<span class="btn btn-default btnZoomIn">放大</span>
 										<span class="btn btn-default btnZoomOut">縮小</span>
 									</div>
 									<span class="help-block">請上傳 800x500 以上的圖片</span>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="col-sm-3 control-label">連結網址類型</label>
+							    <div class="col-sm-9">
+							    	<div class="radio">
+									  <label><input type="radio" name="type" value="" checked="checked">展開圖片</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="youtube">Youtube 影片</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="type" value="link">另開新頁</label>
+									</div>
+							    </div>
+							</div>
+							<div class="form-group">
+							    <label class="col-sm-3 control-label">展開圖片</label>
+							    <div class="col-sm-9">
+							      <input class="form-control" name="photo" type="file" placeholder="請輸入排序">
+							      <span class="help-block">請上傳 800x500 以上的圖片</span>
 							    </div>
 							</div>
 							<div class="form-group">
@@ -89,7 +110,7 @@
         imgSrc: ''
     }
     var cropper = $('.image-box').cropbox(options);
-    $('.upload-crop-image').on('change', 'input[name="photo"]', function(){
+    $('.upload-crop-image').on('change', 'input[name="cover"]', function(){
         var reader = new FileReader();
         reader.onload = function(e) {
             options.imgSrc = e.target.result;
@@ -135,8 +156,8 @@
     });
     $('.form-submit-btn').click(function(e){
 		e.preventDefault();
-		if($('input[name=photo]').val() !== ""){
-			$('input[name=photo_data]').val(cropper.getDataURL());
+		if($('input[name=cover]').val() !== ""){
+			$('input[name=cover_data]').val(cropper.getDataURL());
 			$('form').submit();
 		}
 		$('form').submit();

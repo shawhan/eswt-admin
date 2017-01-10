@@ -10,10 +10,6 @@ class InfoController extends ControllerBase
     {
 
         $data = json_decode(file_get_contents('data.json'));
-        // foreach($data->info as $info) {
-        //     var_dump($info);
-        // }
-
         $this->view->setVar('data', $data->info);
         $this->view->pick('info/list');
     }
@@ -33,15 +29,44 @@ class InfoController extends ControllerBase
             $return_to = '/info/add';
         }
 
-        if(!empty($photo_data)) {
-            $photo_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $photo_data));
+        $cover_path = "";
+        $photo_path = "";
+        if ($this->request->hasFiles() == true) {
+            $isUploaded = false;
+            foreach ($this->request->getUploadedFiles() as $file) {
+                if($file->getName() !== "") {
+                    $key = $file->getKey();
 
-            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
-            file_put_contents($path, $photo_data);
-            $photo_path = $this->di->config->site->url . '/'.  $path;
-        } else {
-            $hasError = true;
-            $this->flashSession->error("請重新上傳圖片。");
+                    if ($key === "photo") {
+                        $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
+
+                        if ($file->moveTo($path)) {
+                            $isUploaded = true;
+                        }
+
+                        if ($isUploaded == false) {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳展開圖片。");
+                        }
+
+                        $photo_path = $this->di->config->site->url . '/'.  $path;
+                    }
+
+                    if ($key === "cover") {
+                        if(!empty($cover_data)) {
+                            $cover_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $cover_data));
+
+                            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+                            file_put_contents($path, $cover_data);
+                            $cover_path = $this->di->config->site->url . '/'.  $path;
+                        } else {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳封面圖片。");
+                        }
+                    }
+
+                }
+            }
         }
 
         if (empty($title)) {
@@ -58,6 +83,24 @@ class InfoController extends ControllerBase
             $this->flashSession->error("請輸入順序。");
         }
 
+        if ($type === "" && $photo_path === "") {
+            $hasError = true;
+            $this->flashSession->error("請上傳展開圖片。");
+        }
+        if ($type === "link" && $url === "") {
+            $hasError = true;
+            $this->flashSession->error("請輸入連結網址。");
+        }
+        if ($type === "youtube") {
+            parse_str(parse_url($url,PHP_URL_QUERY),$param_array);
+            if (!array_key_exists("v", $param_array)) {
+                $hasError = true;
+                $this->flashSession->error("請輸入正確的 Youtube 影片網址。");
+            } else {
+                $url = $param_array["v"];
+            }
+        }
+
         if($hasError){
             return $this->dispatcher->forward(array(
                 'controller'    => 'info',
@@ -68,11 +111,13 @@ class InfoController extends ControllerBase
             $insert = array(
                 "title" => $title,
                 "summary" => $summary,
+                "date" => $date,
+                "cover" => $cover_path,
                 "photo" => $photo_path,
                 "url" => $url,
-                "sort" => $sort,
                 "media" => $media,
-                "date" => $date,
+                "type" => $type,
+                "sort" => $sort,
                 "create" => date('Y-m-d H:i')
             );
             $data->info[] = $insert;
@@ -114,14 +159,44 @@ class InfoController extends ControllerBase
         extract($postdata, EXTR_SKIP);
         $hasError = false;
 
-        if(!empty($photo_data)) {
-            $photo_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $photo_data));
+        $cover_path = $row->cover;
+        $photo_path = $row->photo;
+        if ($this->request->hasFiles() == true) {
+            $isUploaded = false;
+            foreach ($this->request->getUploadedFiles() as $file) {
+                if($file->getName() !== "") {
+                    $key = $file->getKey();
 
-            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
-            file_put_contents($path, $photo_data);
-            $photo_path = $this->di->config->site->url . '/'.  $path;
-        } else {
-            $photo_path = $row->photo;
+                    if ($key === "photo") {
+                        $path = 'img/'. md5(uniqid(rand(), true)) . '-' .$file->getName();
+
+                        if ($file->moveTo($path)) {
+                            $isUploaded = true;
+                        }
+
+                        if ($isUploaded == false) {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳展開圖片。");
+                        }
+
+                        $photo_path = $this->di->config->site->url . '/'.  $path;
+                    }
+
+                    if ($key === "cover") {
+                        if(!empty($cover_data)) {
+                            $cover_data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $cover_data));
+
+                            $path = 'img/'.md5(uniqid(rand(), true)).'.png';
+                            file_put_contents($path, $cover_data);
+                            $cover_path = $this->di->config->site->url . '/'.  $path;
+                        } else {
+                            $hasError = true;
+                            $this->flashSession->error("請重新上傳封面圖片。");
+                        }
+                    }
+
+                }
+            }
         }
 
         if (empty($title)) {
@@ -137,6 +212,23 @@ class InfoController extends ControllerBase
             $hasError = true;
             $this->flashSession->error("請輸入順序。");
         }
+        if ($type === "" && $photo_path === "") {
+            $hasError = true;
+            $this->flashSession->error("請上傳展開圖片。");
+        }
+        if ($type === "link" && $url === "") {
+            $hasError = true;
+            $this->flashSession->error("請輸入連結網址。");
+        }
+        if ($type === "youtube") {
+            parse_str(parse_url($url,PHP_URL_QUERY),$param_array);
+            if (!array_key_exists("v", $param_array)) {
+                $hasError = true;
+                $this->flashSession->error("請輸入正確的 Youtube 影片網址。");
+            } else {
+                $url = $param_array["v"];
+            }
+        }
 
         if($hasError){
             return $this->dispatcher->forward(array(
@@ -147,11 +239,13 @@ class InfoController extends ControllerBase
             $update = array(
                 "title" => $title,
                 "summary" => $summary,
+                "date" => $date,
+                "cover" => $cover_path,
                 "photo" => $photo_path,
                 "url" => $url,
-                "sort" => $sort,
+                "type" => $type,
                 "media" => $media,
-                "date" => $date,
+                "sort" => $sort,
                 "create" => $row->create
             );
             $data->info["$id"] = $update;

@@ -10,10 +10,6 @@ class MediaController extends ControllerBase
     {
 
         $data = json_decode(file_get_contents('data.json'));
-        // foreach($data->media as $media) {
-        //     var_dump($media);
-        // }
-
         $this->view->setVar('data', $data->media);
         $this->view->pick('media/list');
     }
